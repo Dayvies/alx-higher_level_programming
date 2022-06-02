@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import os
-os.system('echo "ABCDEFGHIJKLMNOPQRSTUVWXYZ"')
+import subprocess
+subprocess.run('echo "ABCDEFGHIJKLMNOPQRSTUVWXYZ"')
