@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 def printarg():
     import sys
-    lenn = len(sys.argv) - 1
-    print("{:d} argument{a}".format(lenn,
-                                    a="s." if lenn == 0 else ":" if lenn == 1 else "s:"))
-    for n in range(1, lenn+1):
+    lx = len(sys.argv) - 1
+    print("{:d} argument{a}".format(
+        lx, a="s." if lx == 0 else ":" if lx == 1 else "s:"))
+    for n in range(1, lx+1):
         print("{:d}: {}".format(n, sys.argv[n]))
 
 
