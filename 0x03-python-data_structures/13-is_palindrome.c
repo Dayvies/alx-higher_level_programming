@@ -8,19 +8,12 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	int count = 1, i, j, *b;
+	int count = 1, i, j, *b, *bnew;
 
 	current = *head;
 	if (current == NULL || current->next == NULL)
 		return (1);
-	while (current->next)
-	{
-		current = current->next;
-		count += 1;
-	}
-	b = malloc(count * sizeof(int));
-	current = *head;
-	count = 1;
+	b = malloc(1000 * sizeof(int));
 	b[0] = current->n;
 	while (current->next)
 	{
@@ -28,16 +21,17 @@ int is_palindrome(listint_t **head)
 		b[count] = current->n;
 		count += 1;
 	}
+	bnew = realloc(b, sizeof(int) * count);
 	j = count - 1;
 	for (i = 0; i < count / 2; i++)
 	{
-		if (b[i] != b[j])
+		if (bnew[i] != bnew[j])
 		{
-			free(b);
+			free(bnew);
 			return (0);
 		}
 		j--;
 	}
-	free(b);
+	free(bnew);
 	return (1);
 }
