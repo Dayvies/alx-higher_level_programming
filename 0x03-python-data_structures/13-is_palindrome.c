@@ -13,7 +13,7 @@ int is_palindrome(listint_t **head)
 	current = *head;
 	if (current == NULL || current->next == NULL)
 		return (1);
-	b = malloc(100* sizeof(int));
+	b = malloc(10000* sizeof(int));
 	b[0] = current->n;
 	while (current->next)
 	{
