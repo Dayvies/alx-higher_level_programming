@@ -1,4 +1,4 @@
-#!/bin/bash/python3
+#!/bin/python3
 def multiply_by_2(a_dictionary):
     dict = {}
     for n in a_dictionary:
