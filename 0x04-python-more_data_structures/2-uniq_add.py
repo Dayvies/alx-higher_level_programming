@@ -5,7 +5,7 @@ def uniq_add(my_list=[]):
     mr.sort()
     for i in range(len(mr)):
         if i != 0 and mr[i] == mr[i-1]:
-         continue
+            continue
         else:
             sum += mr[i]
     return sum
