@@ -19,9 +19,15 @@ class Square:
                 size (int) : private size of square default value of 0.
                 position (tuple)
         """
-
-        self.__size = size
-        self.__position = position
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        elif type(position) != tuple or position[0] < 0 or position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__size = size
+            self.__position = position
 
     def area(self):
         """
@@ -93,3 +99,4 @@ class Square:
             print()
         for i in range(self.__size):
             print("{}{}".format(' '*self.__position[0], '#'*self.__size))
+        
