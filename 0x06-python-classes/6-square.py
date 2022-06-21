@@ -93,4 +93,4 @@ class Square:
         for i in range(self.__size):
             print("{}{}".format(' '*self.__position[0], '#'*self.__size))
         if (self.__size == 0):
-            print()
+            print("{}".format(' '*self.__position[0]))
