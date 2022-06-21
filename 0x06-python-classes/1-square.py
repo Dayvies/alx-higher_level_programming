@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module creates a class called square. 
+This module creates a class called square.
 Private instance attribute: size
 """
 
