@@ -2,12 +2,15 @@
 """
 Has two classes . One inherits from the other
 """
+
+
 class MyList(list):
+    """
+    Inherits properties from list
+    """
+
+    def print_sorted(self):
         """
-        Inherits properties from list
+        returns a sorted list
         """
-        def print_sorted(self):
-                """
-                returns a sorted list
-                """
-                print(sorted(self))
+        print(sorted(self))
