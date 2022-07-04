@@ -30,6 +30,7 @@ class Square(Rectangle):
         st += '/'
         st += str(self._Rectangle__height)
         return st
+
     def area(self):
         """Computes the area of a Square instance.
         Overwrites the area() method from Rectangle.
