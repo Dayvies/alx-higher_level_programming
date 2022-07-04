@@ -6,7 +6,8 @@ Contains an empty class BaseGeometry
 
 class BaseGeometry():
     """
-    Class on Geometry"""
+    Class on Geometry
+    """
 
     def area(self):
         """
@@ -19,9 +20,9 @@ class BaseGeometry():
         Validates Integers
         """
         if type(value) != int:
-            raise TypeError(name + " must be an integer")
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(name + " must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
@@ -33,7 +34,7 @@ class Rectangle(BaseGeometry):
         """
         runs when class is initialised
         """
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
