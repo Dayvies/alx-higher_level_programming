@@ -31,9 +31,12 @@ class Rectangle(BaseGeometry):
     """
 
     def __init__(self, width, height):
+        """Initializes an instance.
+        Args:
+            - width: width of the rectangle
+            - heigth: height of the rectangle
         """
-        runs when class is initialised
-        """
+
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
