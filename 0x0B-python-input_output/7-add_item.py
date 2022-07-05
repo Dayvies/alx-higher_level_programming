@@ -6,6 +6,7 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
 
 def main():
+    """Main function of module"""
     try:
         my_list = load_from_json_file("add_item.json")
     except:
@@ -14,5 +15,6 @@ def main():
         my_list.append(sys.argv[i])
     save_to_json_file(my_list, "add_item.json")
 
+
 if __name__ == "__main__":
-        main()
+    main()
