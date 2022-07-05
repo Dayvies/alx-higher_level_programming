@@ -7,12 +7,12 @@ Interchanges equal sign of int
 class MyInt(int):
     def __eq__(self, other):
         """
-        Inverted not equals
+        not equal function returns true
         """
         return super().__ne__(other)
 
     def __ne__(self, other):
         """
-        Inverted equals
+        equal function returns true
         """
-        return not self.__eq__(other)
+        return super().__eq__(other)
