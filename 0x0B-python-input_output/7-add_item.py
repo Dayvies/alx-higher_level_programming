@@ -9,7 +9,7 @@ def main():
     """Main function of module"""
     try:
         my_list = load_from_json_file("add_item.json")
-    except:
+    except Exception:
         my_list = []
     for i in range(1, len(sys.argv)):
         my_list.append(sys.argv[i])
