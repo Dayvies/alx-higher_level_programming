@@ -8,6 +8,7 @@ class MyInt(int):
     """
     Reverses inequality and equality in int
     """
+
     def __eq__(self, other):
         """
         not equal function returns true
@@ -19,4 +20,3 @@ class MyInt(int):
         equal function returns true
         """
         return super().__eq__(other)
-
