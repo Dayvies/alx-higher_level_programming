@@ -8,7 +8,6 @@ from re import L
 
 class Base():
     """Class that creates a base"""
-    __nb_objects = 0
 
     def __init__(self, id=None):
         """Runs when an instance is initialised"""
@@ -20,7 +19,7 @@ class Base():
 
     def to_json_string(list_dictionaries):
         """Returns a JSON representation of list_dictionaries"""
-        if list_dictionaries is None or len(list_dictionaries) == 0:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         if (type(list_dictionaries) != list or
            not all(type(x) == dict for x in list_dictionaries)):
