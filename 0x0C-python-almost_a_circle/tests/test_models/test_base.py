@@ -10,8 +10,7 @@ from models.square import Square
 
 
 class BaseTest(unittest.TestCase):
-    def setUp(self):
-        Base._Base__nb_objects = 0
+    """Test class for Base class."""
     b1 = Base()
     b2 = Base(56)
     b3 = Base()
@@ -22,9 +21,10 @@ class BaseTest(unittest.TestCase):
         """test id allocation"""
         self.assertEqual(BaseTest.b4.id, 3)
         self.assertEqual(BaseTest.b2.id, 56)
+
     def test_1_0(self):
         """Create new instances: check for id."""
-        
+
         self.assertEqual(BaseTest.bt.id, 4)
         b2 = Base(12)
         self.assertEqual(b2.id, 12)

@@ -8,6 +8,7 @@ from re import L
 
 class Base():
     """Class that creates a base"""
+    __nb_objects = 0
 
     def __init__(self, id=None):
         """Runs when an instance is initialised"""
