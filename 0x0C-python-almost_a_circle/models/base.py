@@ -19,8 +19,8 @@ class Base():
             self.id = Base.__nb_objects
 
     def to_json_string(list_dictionaries):
-        """json to string """
-        if list_dictionaries is None or len(list_dictionaries) < 1:
+        """Returns a JSON representation of list_dictionaries"""
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         if (type(list_dictionaries) != list or
            not all(type(x) == dict for x in list_dictionaries)):
