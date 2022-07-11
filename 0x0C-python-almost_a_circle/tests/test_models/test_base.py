@@ -10,6 +10,8 @@ from models.square import Square
 
 
 class BaseTest(unittest.TestCase):
+    def setUp(self):
+        Base._Base__nb_objects = 0
     b1 = Base()
     b2 = Base(56)
     b3 = Base()
