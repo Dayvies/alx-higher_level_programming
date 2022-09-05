@@ -4,7 +4,6 @@ const process = require('process');
 const args = process.argv;
 function maxArr (arr) {
   let max = 0;
-  console.log(arr);
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > arr[max]) {
       max = i;
