@@ -8,7 +8,7 @@ def main():
     """main function"""
 
     user = 'https://api.github.com/repos/{}/{}/commits'.format(
-        sys.argv[1], sys.argv[2])
+        sys.argv[2], sys.argv[1])
     login = requests.get(user)
     x = login.json()
     count = 0
