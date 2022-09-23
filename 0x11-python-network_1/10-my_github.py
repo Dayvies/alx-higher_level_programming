@@ -2,7 +2,6 @@
 """headers using requests"""
 import requests
 import sys
-import json
 
 
 def main():
@@ -13,7 +12,7 @@ def main():
     }
     user = 'https://api.github.com/users/{}'.format(sys.argv[1])
     login = requests.get(user, headers=headers)
-    x = json.loads(login.text)
+    x = login.json()
     print(x.get('id'))
 
 
