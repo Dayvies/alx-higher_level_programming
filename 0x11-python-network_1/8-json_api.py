@@ -2,7 +2,6 @@
 """headers using requests"""
 import requests
 import sys
-import json
 
 
 def main():
@@ -13,15 +12,15 @@ def main():
         q = ""
     payload = {'q': q}
     response = requests.post('http://0.0.0.0:5000/search_user', data=payload)
-    str_js = response.text
+
     try:
-        z = json.loads(str_js)
+        z = response.json()
         if z == {}:
             print("No result")
         else:
             print("[{}] {}".format(z.get('id'), z.get('name')))
     except Exception:
-        print("Not a alid JSON")
+        print("Not a valid JSON")
 
 
 if __name__ == "__main__":
