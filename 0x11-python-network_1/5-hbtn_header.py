@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """headers using requests"""
 import requests
+import sys
 
 
 def main():
     """main function"""
-    response = requests.get('https://alx-intranet.hbtn.io/status')
-    print(response.headers['X-Request-Id'])
+    response = requests.get(sys.argv[1])
+    print(response.headers.get('X-Request-Id'))
 
 
 if __name__ == "__main__":
