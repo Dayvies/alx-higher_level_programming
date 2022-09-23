@@ -19,7 +19,7 @@ def main():
         if z == {}:
             print("No result")
         else:
-            print("[{}] {}".format(z['id'], z['name']))
+            print("[{}] {}".format(z.get('id'), z.get('name')))
     except Exception:
         print("Not a alid JSON")
 

@@ -14,7 +14,7 @@ def main():
     user = 'https://api.github.com/users/{}'.format(sys.argv[1])
     login = requests.get(user, headers=headers)
     x = json.loads(login.text)
-    print(x['id'])
+    print(x.get('id'))
 
 
 if __name__ == "__main__":
