@@ -9,7 +9,6 @@ request(url, (error, response, body) => {
   if (error) {
     console.log(error);
   }
-  console.log(body);
   try {
     fs.writeFileSync(fileName, body, { encoding: 'utf-8' });
   } catch (err) {
